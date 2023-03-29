@@ -3,10 +3,11 @@
   "name": "Lichess analysis",
   "description": "Opens lichess analysis for games from chess.com",
   "version": "0.1.0",
-  "permissions": ["tabs"],
+  "permissions": ["tabs", "scripting"],
+  "host_permissions": ["https://www.chess.com/game/live/*"],
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "assets/img/lichess_icon.png"
+    "default_icon": "/assets/img/lichess_icon.png"
   }
   
 }
