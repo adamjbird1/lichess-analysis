@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Lichess analysis",
+  "description": "Opens lichess analysis for games from chess.com",
+  "version": "0.1.0",
+  "permissions": ["tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "assets/img/lichess_icon.png"
+  }
+  
+}

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "chess-web-api": "^1.1.2",
+    "extension-cli": "^1.2.4"
+  }
+}
