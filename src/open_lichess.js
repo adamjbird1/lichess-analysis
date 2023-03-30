@@ -17,12 +17,12 @@ chrome.action.onClicked.addListener(async function(tab) {
                     if (pgn) {
                         openLichess(pgn);
                     } else {
-                        alert("Couldn't find game!");
+                        console.error(`Couldn't find game!`);
                     }
                 })
         });
     } else {
-        alert("Not a valid chess.com game page.")
+        console.error(`Couldn't find game!`);
     }
 });
 
