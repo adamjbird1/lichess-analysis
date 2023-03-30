@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "chess-web-api": "^1.1.2",
-    "chrome-types": "^0.1.181",
-    "extension-cli": "^1.2.4"
-  }
-}
