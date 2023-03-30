@@ -1,13 +1,10 @@
-chrome.tabs.query({
-    active: true,
-    currentWindow: true
-}, function(tabs) {
-    const currentUrl = tabs[0].url;
+chrome.action.onClicked.addListener(async function(tab) {
+    const currentUrl = tab.url;
     // Check if the URL is a chess.com game
     if (currentUrl.startsWith("https://www.chess.com/game/live/")) {
         chrome.scripting.executeScript({
             target: {
-                tabId: tabs[0].id
+                tabId: tab.id
             },
             func: function() {
                 var met = document.querySelector('meta[property="og:image"]');
@@ -36,7 +33,7 @@ async function getDate(gameID) {
         const data = await response.json();
         return data.game.pgnHeaders.Date;
     } catch (error) {
-        console.error(`Error fetching moves for game ${gameID}: ${error}`);
+        console.error(`Error fetching date for game ${gameID}: ${error}`);
         return null;
     }
 }

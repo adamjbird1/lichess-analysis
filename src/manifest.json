@@ -5,9 +5,10 @@
   "version": "0.1.0",
   "permissions": ["tabs", "scripting"],
   "host_permissions": ["https://www.chess.com/game/live/*"],
+  "background": {
+    "service_worker": "open_lichess.js"
+  },
   "action": {
-    "default_popup": "popup.html",
     "default_icon": "/assets/img/lichess_icon.png"
   }
-  
 }
